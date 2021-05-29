@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<div class="container mt-4">
+		<div class="container">
+  			<div class="row">
+  				{% for e in emp %}
+    			<div class="col-lg-4 mt-4">
+      				<div class="card" style="width: 18rem;">
+  						<div class="card-header">
+    						Employe
+  						</div>
+  						<ul class="list-group list-group-flush">
+    						<li class="list-group-item">{{ e.name }}</li>
+    						<li class="list-group-item">{{ e.department }}</li>
+    						<li class="list-group-item">{{ e.emp }}</li>
+  						</ul>
+					</div>
+    			</div>
+    			{% endfor %}
+  			</div>
+		</div>
+	</div>
+{% endblock content %}

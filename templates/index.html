@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<div class="container mt-4">
+		<div class="container">
+  			<div class="row">
+  				{% for e in empls %}
+    			<div class="col-lg-4 mt-4">
+      				<div class="card bg-dark text-light" style="width: 18rem;">
+  						<div class="card-header">
+    						Employe
+  						</div>
+  						<ul class="list-group list-group-flush">
+    						<li class="list-group-item"><a style="text-decoration: none;color: black" href="{{ url_for('employee', employee_id=e.id) }}">{{ e.name }}</a></li>
+                <li class="list-group-item">{{ e.department }}</li>
+                <li class="list-group-item">{{ e.emp }}</li>
+              </ul>
+          </div>
+    			</div>
+    			{% endfor %}
+  			</div>
+		</div>
+	</div>
+{% endblock content %}
